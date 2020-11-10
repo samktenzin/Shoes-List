@@ -22,3 +22,5 @@
 
 #### Component Heirarchy Diagram
 ![Frontend](https://i.imgur.com/tKN6euU.jpg)
+
+##### Credits : (For API) = The Sneaker Database
