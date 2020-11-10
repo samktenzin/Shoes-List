@@ -1,6 +1,6 @@
 # Sneakergrest by Sam Khanal
 
-[GitHub] (https://github.com/samktenzin) || [LinkedIn] (https://www.linkedin.com/in/samktenzin/)
+[GitHub](https://github.com/samktenzin) || [LinkedIn](https://www.linkedin.com/in/samktenzin/)
 
 ## The concept of this app is similar to Pintrest but the main focus of this app is solely on sneakers as it is aimed at sneakerheads!
 
@@ -23,4 +23,4 @@
 #### Component Heirarchy Diagram
 ![Frontend](https://i.imgur.com/tKN6euU.jpg)
 
-##### Credits : (For API) = The Sneaker Database
+##### Credits : (For API) = [The Sneaker Database](https://app.swaggerhub.com/apis-docs/tg4solutions/the-sneaker-database/1.0.0)
