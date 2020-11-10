@@ -24,6 +24,6 @@
 ![Frontend](https://i.imgur.com/tKN6euU.jpg)
 
 #### Backend Diagram
-![Backend](https://imgur.com/a/FeVMy1f)
+![Backend](https://i.imgur.com/2bevbZ0.jpg)
 
 ##### Credits : (For API) = [The Sneaker Database](https://app.swaggerhub.com/apis-docs/tg4solutions/the-sneaker-database/1.0.0)
