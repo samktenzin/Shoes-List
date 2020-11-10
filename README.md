@@ -21,4 +21,4 @@
 #### Users will be able to make an account and search for shoes based on brands and sneaker searches from the search bar and save the shoes they like on to their profile which will be stored in their profile with the shoes they like.
 
 #### Component Heirarchy Diagram
-![Frontend](https://ibb.co/FVnHBFW)
+![Frontend](https://i.imgur.com/tKN6euU.jpg)
