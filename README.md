@@ -23,7 +23,7 @@
 #### Component Heirarchy Diagram
 ![Frontend](https://i.imgur.com/tKN6euU.jpg)
 
-#### Backend Diagram
-![Backend](https://i.imgur.com/2bevbZ0.jpg)
+#### Backend ERD Diagram
+![Backend](https://i.imgur.com/k06LXMt.png)
 
 ##### Credits : (For API) = [The Sneaker Database](https://app.swaggerhub.com/apis-docs/tg4solutions/the-sneaker-database/1.0.0)
