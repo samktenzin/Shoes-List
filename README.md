@@ -18,7 +18,7 @@
 
 
 
-#### Users will be able to make an account and search for shoes based on brands and sneaker searches from the search bar and save the shoes they like on to their profile which will be stored in their profile with the shoes they like.
+#### Users will be able to make an account and search for shoes based on brands and sneaker searches from the search bar and save the shoes they like on to their profile which will be stored in their profile with the shoes they like. Or the user is able to upload a picture on to their profile relating to shoe's they want to post. 
 
 #### Component Heirarchy Diagram
 ![Frontend](https://i.imgur.com/tKN6euU.jpg)
