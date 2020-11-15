@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
+import Navbar from './Components/Navbar/Navbar';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 import GetyeezysList from './Components/GetyeezysList/GetyeezysList'
@@ -13,8 +14,8 @@ class App extends Component {
         <Router>
           <div>
             <Sidebar />
-            <div classname="container">
-              <h1>Yeeyz's to Buy</h1>
+            <div>
+              <Navbar />
             </div>
           </div>
           <Route path ='/' exact component = {GetyeezysList} />
