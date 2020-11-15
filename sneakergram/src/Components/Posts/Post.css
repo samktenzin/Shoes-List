@@ -1,0 +1,19 @@
+.post {
+    text-align: justify;
+    width: 500px;
+    margin: 0px 35px 50px;
+    opacity: 0;
+    z-index: -1;
+    margin-bottom: 80px;
+}
+ 
+.post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.post blockquote {
+    border-left: 1px solid;
+    padding-left: 15px;
+    margin-left: 15px;
+}
