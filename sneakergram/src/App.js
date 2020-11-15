@@ -6,7 +6,12 @@ import Post from './Components/Posts/Post';
 class App extends Component {
   render() {
     return (
-      <Sidebar />
+      <div>
+            <Sidebar />
+            <div>
+              <Post />
+            </div>
+          </div>
     );
   }
 }

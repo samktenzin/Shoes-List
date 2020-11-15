@@ -5,7 +5,7 @@ import "./Sidebar.css"
         render(){
             return (
             <div id="sidebar">
-    
+                
               </div>
            );
         }   
