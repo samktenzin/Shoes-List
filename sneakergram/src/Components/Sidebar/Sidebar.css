@@ -1,0 +1,54 @@
+#sidebar {
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(https://i.imgur.com/HPir4wY.jpg);
+    background-size: cover;
+    display: table;
+}
+
+#sidebar div {
+    text-align: left;
+    width: 210px;
+    margin-left: 100px;
+    padding: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 14px;
+}
+
+#sidebar div img {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    opacity: 0.9;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#sidebar div h1 {
+    text-align: left;
+    margin-bottom: 500px;
+    display: block;
+    color: #fffdfd;
+}
+
+#sidebar div h1 span {
+    display: inline-block;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 6px;
+    
+}
+
+nav {
+    font: bold 6px/10px Times New Roman;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-left: -10px;
+}
+
+nav a {
+    padding: 0px 10px;
+}
