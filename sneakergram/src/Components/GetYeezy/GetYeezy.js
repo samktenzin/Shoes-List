@@ -1,6 +1,6 @@
 import React from "react";
 
-class GetyeezysList extends React.Component{
+class GetYeezy extends React.Component{
     render () {
         return (
             <div>
@@ -10,4 +10,4 @@ class GetyeezysList extends React.Component{
     }
 }
 
-export default GetyeezysList;
+export default GetYeezy;
