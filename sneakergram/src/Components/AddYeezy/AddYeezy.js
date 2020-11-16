@@ -63,7 +63,7 @@ class AddYeezy extends React.Component{
                         <input  type="text"
                                 className="form-control"
                                 value={this.state.AddYeezy_description}
-                                onChange={this.onChangeTodoDescription}
+                                onChange={this.onChangeAddYeezyDescription}
                                 />
                     </div>
                     <div className="form-group">
@@ -72,7 +72,7 @@ class AddYeezy extends React.Component{
                                 type="text" 
                                 className="form-control"
                                 value={this.state.AddYeezy_img}
-                                onChange={this.onChangeTodoResponsible}
+                                onChange={this.onChangeAddYeezyImg}
                                 />
                     </div>
                     <div className="form-group">
@@ -83,7 +83,7 @@ class AddYeezy extends React.Component{
                                     id="priorityLow" 
                                     value="Low"
                                     checked={this.state.AddYeezy_priority==='Low'} 
-                                    onChange={this.onChangeTodoPriority}
+                                    onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">Low</label>
                         </div>
@@ -94,7 +94,7 @@ class AddYeezy extends React.Component{
                                     id="priorityMedium" 
                                     value="Medium" 
                                     checked={this.state.AddYeezy_priority==='Medium'} 
-                                    onChange={this.onChangeTodoPriority}
+                                    onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">Medium</label>
                         </div>
@@ -105,7 +105,7 @@ class AddYeezy extends React.Component{
                                     id="priorityHigh" 
                                     value="High" 
                                     checked={this.state.AddYeezy_priority==='High'} 
-                                    onChange={this.onChangeTodoPriority}
+                                    onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">High</label>
                         </div>
