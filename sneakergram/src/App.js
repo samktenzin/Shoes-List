@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
-import Navbar from './Components/Navbar/Navbar';
+import Navbar from './Components/Navbar/Navbar'
+
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 import GetYeezy from './Components/GetYeezy/GetYeezy'
@@ -14,9 +15,7 @@ class App extends Component {
         <Router>
           <div>
             <Sidebar />
-            <div>
-              <Navbar />
-            </div>
+            <Navbar />
           </div>
           <Route path ='/' exact component = {GetYeezy} />
           <Route path ='/edit/:id' component = {EditYeezy} />

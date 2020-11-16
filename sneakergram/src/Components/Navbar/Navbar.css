@@ -1,9 +1,10 @@
-.topnav {
+.Yeezynav {
     background-color: #e7e2bf;
     overflow: visible;
+    height: 30px;
   }
   
-  .topnav a {
+  .Yeezynav  {
     float: right;
     color: #4d4343;
     text-align: center;
@@ -13,12 +14,12 @@
     flex-direction: row-reverse;
   }
   
-  .topnav a:hover {
+  .Yeezynav a:hover {
     background-color: #C2C4C9;
     color: black;
   }
   
-  .topnav a.active {
+  .Yeezynav a.active {
     background-color: #A4A1AB;
     color: white;
   }
