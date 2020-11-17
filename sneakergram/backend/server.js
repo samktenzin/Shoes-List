@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser')
-const path = require('path');
 const mongoose = require('mongoose');
 const AddYeezyRoutes = express.Router();
 const PORT = 8080
@@ -12,22 +11,13 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'build')));
-
-
-app.get('/ping', function (req, res) {
- return res.send('pong');
-});
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 mongoose.connect('mongodb://127.0.0.1:27017/AddYeezy', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
     console.log("Yeezy database connection success");
+})
 
   AddYeezyRoutes.route('/').get(function(req, res) {
   AddYeezy.find(function(err, AddYeezy) {
