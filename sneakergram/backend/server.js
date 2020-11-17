@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/AddYeezy', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/adYeezy', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -20,11 +20,11 @@ connection.once('open', function() {
 })
 
   AddYeezyRoutes.route('/').get(function(req, res) {
-  AddYeezy.find(function(err, AddYeezy) {
+  AddYeezy.find(function(err, adYeezy) {
     if (err) {
        console.log(err);
       } else {
-        res.json(AddYeezy);
+        res.json(adYeezy);
         }
     });
 });
@@ -56,7 +56,7 @@ AddYeezyRoutes.route('/update/:id').post(function(req, res) {
 });
 
 AddYeezyRoutes.route('/add').post(function(req, res) {
-  let AddYeezy = new AddYeezy(req.body);
+  let AddYeezy= new AddYeezy(req.body);
   AddYeezy.save()
       .then(AddYeezy => {
           res.status(200).json({'AddYeezy': 'Yeezy added!'});
@@ -66,7 +66,7 @@ AddYeezyRoutes.route('/add').post(function(req, res) {
       });
 });
 
-app.use('/AddYeezy', AddYeezyRoutes);
+app.use('/adYeezy', AddYeezyRoutes);
 
 
 app.listen(PORT, function() {
