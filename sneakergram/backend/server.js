@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const mongoose = require('mongoose');
 const AddYeezyRoutes = express.Router();
+const PORT = 8080
 
 let AddYeezy = require('./GetYeezy.model');
 
@@ -56,10 +57,10 @@ AddYeezyRoutes.route('/update/:id').post(function(req, res) {
       AddYeezy.AddYeezy_released = req.body.AddYeezy_released;
 
       AddYeezy.save().then(AddYeezy => {
-              res.json('Todo updated!');
+              res.json('AddYeezy updated!');
           })
           .catch(err => {
-              res.status(400).send("Update not possible");
+              res.status(400).send("Error");
           });
   });
 });
@@ -68,14 +69,16 @@ AddYeezyRoutes.route('/add').post(function(req, res) {
   let AddYeezy = new AddYeezy(req.body);
   AddYeezy.save()
       .then(AddYeezy => {
-          res.status(200).json({'AddYeezy': 'Yeezy added successfully'});
+          res.status(200).json({'AddYeezy': 'Yeezy added!'});
       })
       .catch(err => {
-          res.status(400).send('adding new Yeezy failed');
+          res.status(400).send('Could not add Yeezy');
       });
 });
 
 app.use('/AddYeezy', AddYeezyRoutes);
 
 
-app.listen(process.env.PORT || 8080);
+app.listen(PORT, function() {
+  console.log("Server is running on Port: " + PORT);
+});
