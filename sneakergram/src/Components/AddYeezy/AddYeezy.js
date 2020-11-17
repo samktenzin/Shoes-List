@@ -1,6 +1,6 @@
 import React from "react";
 
-class AddYeezy extends React.Component{
+class CreateAddYeezy extends React.Component{
     constructor (props) {
         super(props);
 
@@ -10,10 +10,10 @@ class AddYeezy extends React.Component{
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            AddYeezy_description: '',
-            AddYeezy_price: '',
-            AddYeezy_priority: '',
-            AddYeezy_released: false
+            addYeezy_description: '',
+            addYeezy_price: '',
+            addYeezy_priority: '',
+            addYeezy_released: false
         }
         //Setting the initial state of the component
         //with the properties above.
@@ -21,19 +21,19 @@ class AddYeezy extends React.Component{
 
     onChangeAddYeezyDescription(e) {
         this.setState({
-            AddYeezy_description: e.target.value
+            addYeezy_description: e.target.value
         });
     }
 
     onChangeAddYeezyPrice(e) {
         this.setState({
-            AddYeezy_price: e.target.value
+            addYeezy_price: e.target.value
         });
     }
 
     onChangeAddYeezyPriority(e) {
         this.setState({
-            AddYeezy_priority: e.target.value
+            addYeezy_priority: e.target.value
         });
     }
 
@@ -41,15 +41,15 @@ class AddYeezy extends React.Component{
         e.preventDefault();
         
         console.log(`Yeezy submitted:`);
-        console.log(`Add Yeezy Description: ${this.state.AddYeezy_description}`);
-        console.log(`Add Yeezy Price: ${this.state.AddYeezy_price}`);
-        console.log(`Add Yeezy Priority: ${this.state.AddYeezy_priority}`);
+        console.log(`Add Yeezy Description: ${this.state.addYeezy_description}`);
+        console.log(`Add Yeezy Price: ${this.state.addYeezy_price}`);
+        console.log(`Add Yeezy Priority: ${this.state.addYeezy_priority}`);
         
         this.setState({
-            AddYeezy_description: '',
-            AddYeezy_price: '',
-            AddYeezy_priority: '',
-            AddYeezy_released: false
+            addYeezy_description: '',
+            addYeezy_price: '',
+            addYeezy_priority: '',
+            addYeezy_released: false
         })
     }
 
@@ -62,7 +62,7 @@ class AddYeezy extends React.Component{
                         <label>Description: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.AddYeezy_description}
+                                value={this.state.addYeezy_description}
                                 onChange={this.onChangeAddYeezyDescription}
                                 />
                     </div>
@@ -71,7 +71,7 @@ class AddYeezy extends React.Component{
                         <input 
                                 type="number" 
                                 className="form-control"
-                                value={this.state.AddYeezy_Price}
+                                value={this.state.addYeezy_Price}
                                 onChange={this.onChangeAddYeezyPrice}
                                 />
                     </div>
@@ -82,7 +82,7 @@ class AddYeezy extends React.Component{
                                     name="priorityOptions" 
                                     id="priorityLow" 
                                     value="Low"
-                                    checked={this.state.AddYeezy_priority==='Low'} 
+                                    checked={this.state.addYeezy_priority==='Low'} 
                                     onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">Low</label>
@@ -93,7 +93,7 @@ class AddYeezy extends React.Component{
                                     name="priorityOptions" 
                                     id="priorityMedium" 
                                     value="Medium" 
-                                    checked={this.state.AddYeezy_priority==='Medium'} 
+                                    checked={this.state.addYeezy_priority==='Medium'} 
                                     onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">Medium</label>
@@ -104,7 +104,7 @@ class AddYeezy extends React.Component{
                                     name="priorityOptions" 
                                     id="priorityHigh" 
                                     value="High" 
-                                    checked={this.state.AddYeezy_priority==='High'} 
+                                    checked={this.state.addYeezy_priority==='High'} 
                                     onChange={this.onChangeAddYeezyPriority}
                                     />
                             <label className="form-check-label">High</label>
@@ -120,4 +120,4 @@ class AddYeezy extends React.Component{
     }
 }
 
-export default AddYeezy;
+export default CreateAddYeezy;

@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let AddYeezy = new Schema({
-    AddYeezy_description: {
+    addYeezy_description: {
         type: String
     },
-    AddYeezy_price: {
+    addYeezy_price: {
         type: String
     },
-    AddYeezy_priority: {
+    addYeezy_priority: {
         type: String
     },
-    AddYeezy_released: {
+    addYeezy_released: {
         type: Boolean
     }
 });
