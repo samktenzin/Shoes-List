@@ -16,4 +16,4 @@ let GetYeezy = new Schema({
     }
 });
 
-module.exports = mongoose.model('Todo', Todo);
+module.exports = mongoose.model('GetYeezy', GetYeezy);
