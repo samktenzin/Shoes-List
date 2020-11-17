@@ -5,7 +5,7 @@ let GetYeezy = new Schema({
     GetYeezy_description: {
         type: String
     },
-    GetYeezy_img: {
+    GetYeezy_price: {
         type: String
     },
     GetYeezy_priority: {
