@@ -27,7 +27,7 @@ class AddYeezy extends React.Component{
 
     onChangeAddYeezyPrice(e) {
         this.setState({
-            AddYeezy_Price: e.target.value
+            AddYeezy_price: e.target.value
         });
     }
 
@@ -69,7 +69,7 @@ class AddYeezy extends React.Component{
                     <div className="form-group">
                         <label>Price: </label>
                         <input 
-                                type="text" 
+                                type="number" 
                                 className="form-control"
                                 value={this.state.AddYeezy_Price}
                                 onChange={this.onChangeAddYeezyPrice}
