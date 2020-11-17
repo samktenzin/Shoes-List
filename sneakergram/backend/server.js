@@ -3,12 +3,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser')
 const path = require('path');
 const mongoose = require('mongoose');
-// const { default: GetYeezy } = require('../src/Components/GetYeezy/GetYeezy');
-const GetYeezyRoutes = express.Router();
+const AddYeezyRoutes = express.Router();
 
-let GetYeezy = require('./GetYeezy.model');
+let AddYeezy = require('./GetYeezy.model');
 
-require('dotenv').config();
 const app = express();
 
 app.use(cors());
@@ -28,36 +26,36 @@ mongoose.connect('mongodb://127.0.0.1:27017/GetYeezy', { useNewUrlParser: true }
 const connection = mongoose.connection;
 
 connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
+    console.log("Yeezy database connection success");
 
-    GetYeezyRoutes.route('/').get(function(req, res) {
-  GetYeezy.find(function(err, GetYeezy) {
+  AddYeezyRoutes.route('/').get(function(req, res) {
+  AddYeezy.find(function(err, AddYeezy) {
     if (err) {
        console.log(err);
       } else {
-        res.json(GetYeezy);
+        res.json(AddYeezy);
         }
     });
 });
 
-GetYeezyRoutes.route('/:id').get(function(req, res) {
+AddYeezyRoutes.route('/:id').get(function(req, res) {
   let id = req.params.id;
-  GetYeezy.findById(id, function(err, todo) {
-      res.json(GetYeezy);
+  AddYeezy.findById(id, function(err, todo) {
+      res.json(AddYeezy);
   });
 });
 
-GetYeezyRoutes.route('/update/:id').post(function(req, res) {
-  GetYeezy.findById(req.params.id, function(err, GetYeezy) {
-      if (!GetYeezy)
+AddYeezyRoutes.route('/update/:id').post(function(req, res) {
+  AddYeezy.findById(req.params.id, function(err, AddYeezy) {
+      if (!AddYeezy)
           res.status(404).send("data is not found");
       else
-          GetYeezy.GetYeezy_description = req.body.GetYeezy_description;
-          GetYeezy.GetYeezy_img = req.body.GetYeezy_img;
-          GetYeezy.GetYeezy_priority = req.body.GetYeezy_priority;
-          GetYeezy.GetYeezy_released = req.body.GetYeezy_released;
+      AddYeezy.AddYeezy_description = req.body.AddYeezy_description;
+      AddYeezy.AddYeezy_price = req.body.AddYeezy_img;
+      AddYeezy.AddYeezy_priority = req.body.AddYeezy_priority;
+      AddYeezy.AddYeezy_released = req.body.AddYeezy_released;
 
-          GetYeezy.save().then(GetYeezy => {
+      AddYeezy.save().then(AddYeezy => {
               res.json('Todo updated!');
           })
           .catch(err => {
@@ -66,18 +64,18 @@ GetYeezyRoutes.route('/update/:id').post(function(req, res) {
   });
 });
 
-GetYeezyRoutes.route('/add').post(function(req, res) {
-  let GetYeezy = new GetYeezy(req.body);
-  GetYeezy.save()
-      .then(GetYeezy => {
-          res.status(200).json({'GetYeezy': 'GetYeezy added successfully'});
+AddYeezyRoutes.route('/add').post(function(req, res) {
+  let AddYeezy = new AddYeezy(req.body);
+  AddYeezy.save()
+      .then(AddYeezy => {
+          res.status(200).json({'AddYeezy': 'Yeezy added successfully'});
       })
       .catch(err => {
-          res.status(400).send('adding new GetYeezy failed');
+          res.status(400).send('adding new Yeezy failed');
       });
 });
 
-app.use('/GetYeezy', GetYeezyRoutes);
+app.use('/AddYeezy', AddYeezyRoutes);
 
 
 app.listen(process.env.PORT || 8080);
