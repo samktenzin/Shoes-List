@@ -5,13 +5,13 @@ class AddYeezy extends React.Component{
         super(props);
 
         this.onChangeAddYeezyDescription = this.onChangeAddYeezyDescription.bind(this);
-        this.onChangeAddYeezyImg = this.onChangeAddYeezyImg.bind(this);
+        this.onChangeAddYeezyPrice = this.onChangeAddYeezyPrice.bind(this);
         this.onChangeAddYeezyPriority = this.onChangeAddYeezyPriority.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             AddYeezy_description: '',
-            AddYeezy_img: '',
+            AddYeezy_price: '',
             AddYeezy_priority: '',
             AddYeezy_released: false
         }
@@ -25,9 +25,9 @@ class AddYeezy extends React.Component{
         });
     }
 
-    onChangeAddYeezyImg(e) {
+    onChangeAddYeezyPrice(e) {
         this.setState({
-            AddYeezy_img: e.target.value
+            AddYeezy_Price: e.target.value
         });
     }
 
@@ -42,12 +42,12 @@ class AddYeezy extends React.Component{
         
         console.log(`Yeezy submitted:`);
         console.log(`Add Yeezy Description: ${this.state.AddYeezy_description}`);
-        console.log(`Add Yeezy Img: ${this.state.AddYeezy_img}`);
+        console.log(`Add Yeezy Price: ${this.state.AddYeezy_price}`);
         console.log(`Add Yeezy Priority: ${this.state.todo_priority}`);
         
         this.setState({
             AddYeezy_description: '',
-            AddYeezy_img: '',
+            AddYeezy_price: '',
             AddYeezy_priority: '',
             AddYeezy_released: false
         })
@@ -56,7 +56,7 @@ class AddYeezy extends React.Component{
     render () {
         return (
             <div style={{marginTop: 10}}>
-                <h3>Get New Yeezy</h3>
+                <h3>Add New Yeezy</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
                         <label>Description: </label>
@@ -67,12 +67,12 @@ class AddYeezy extends React.Component{
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Image: </label>
+                        <label>Price: </label>
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.AddYeezy_img}
-                                onChange={this.onChangeAddYeezyImg}
+                                value={this.state.AddYeezy_Price}
+                                onChange={this.onChangeAddYeezyPrice}
                                 />
                     </div>
                     <div className="form-group">
@@ -112,7 +112,7 @@ class AddYeezy extends React.Component{
                     </div>
 
                     <div className="form-group">
-                        <input type="submit" value="Get Yeezy" className="btn btn-primary" />
+                        <input type="submit" value="Add Yeezy" className="btn btn-primary" />
                     </div>
                 </form>
             </div>
