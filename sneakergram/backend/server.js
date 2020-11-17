@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const AddYeezyRoutes = express.Router();
 const PORT = 8080
 
-let AddYeezy = require('./GetYeezy.model');
+let AddYeezy = require('./models/Yeezy/AddYeezy.model');
 
 const app = express();
 
@@ -52,7 +52,7 @@ AddYeezyRoutes.route('/update/:id').post(function(req, res) {
           res.status(404).send("NO");
       else
       AddYeezy.AddYeezy_description = req.body.AddYeezy_description;
-      AddYeezy.AddYeezy_price = req.body.AddYeezy_img;
+      AddYeezy.AddYeezy_price = req.body.AddYeezy_price;
       AddYeezy.AddYeezy_priority = req.body.AddYeezy_priority;
       AddYeezy.AddYeezy_released = req.body.AddYeezy_released;
 
