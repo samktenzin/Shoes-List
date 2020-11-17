@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/GetYeezy', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/AddYeezy', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -41,7 +41,7 @@ connection.once('open', function() {
 
 AddYeezyRoutes.route('/:id').get(function(req, res) {
   let id = req.params.id;
-  AddYeezy.findById(id, function(err, todo) {
+  AddYeezy.findById(id, function(err, AddYeezy) {
       res.json(AddYeezy);
   });
 });
@@ -49,7 +49,7 @@ AddYeezyRoutes.route('/:id').get(function(req, res) {
 AddYeezyRoutes.route('/update/:id').post(function(req, res) {
   AddYeezy.findById(req.params.id, function(err, AddYeezy) {
       if (!AddYeezy)
-          res.status(404).send("data is not found");
+          res.status(404).send("NO");
       else
       AddYeezy.AddYeezy_description = req.body.AddYeezy_description;
       AddYeezy.AddYeezy_price = req.body.AddYeezy_img;
