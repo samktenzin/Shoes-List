@@ -1,7 +1,10 @@
 .Yeezynav {
-    background-color: #e7e2bf;
+    background-color: #F76A43;
     overflow: visible;
     height: 30px;
+    margin-right: 60px;
+    width: auto;
+    justify-content: space-between;
   }
   
   .Yeezynav  {
@@ -12,14 +15,15 @@
     text-decoration: none;
     font-size: 17px;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
   
   .Yeezynav a:hover {
-    background-color: #C2C4C9;
+    background-color: #F76A43;
     color: black;
   }
   
-  .Yeezynav a.active {
+  .Yeezynav a:active {
     background-color: #A4A1AB;
     color: white;
   }

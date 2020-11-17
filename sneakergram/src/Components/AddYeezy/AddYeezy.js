@@ -67,7 +67,7 @@ class AddYeezy extends React.Component{
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Responsible: </label>
+                        <label>Image: </label>
                         <input 
                                 type="text" 
                                 className="form-control"
@@ -112,7 +112,7 @@ class AddYeezy extends React.Component{
                     </div>
 
                     <div className="form-group">
-                        <input type="submit" value="Create Todo" className="btn btn-primary" />
+                        <input type="submit" value="Get Yeezy" className="btn btn-primary" />
                     </div>
                 </form>
             </div>
