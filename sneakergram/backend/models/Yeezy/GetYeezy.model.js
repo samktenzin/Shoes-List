@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let GetYeezy = new Schema({
-    GetYeezy_description: {
+let AddYeezy = new Schema({
+    AddYeezy_description: {
         type: String
     },
-    GetYeezy_price: {
+    AddYeezy_price: {
         type: String
     },
-    GetYeezy_priority: {
+    AddYeezy_priority: {
         type: String
     },
-    GetYeezy_released: {
+    AddYeezy_released: {
         type: Boolean
     }
 });
 
-module.exports = mongoose.model('GetYeezy', GetYeezy);
+module.exports = mongoose.model('AddYeezy', AddYeezy);
