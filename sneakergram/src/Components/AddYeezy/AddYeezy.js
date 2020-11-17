@@ -43,7 +43,7 @@ class AddYeezy extends React.Component{
         console.log(`Yeezy submitted:`);
         console.log(`Add Yeezy Description: ${this.state.AddYeezy_description}`);
         console.log(`Add Yeezy Price: ${this.state.AddYeezy_price}`);
-        console.log(`Add Yeezy Priority: ${this.state.todo_priority}`);
+        console.log(`Add Yeezy Priority: ${this.state.AddYeezy_priority}`);
         
         this.setState({
             AddYeezy_description: '',
