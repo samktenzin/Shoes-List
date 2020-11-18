@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 class CreateAddYeezy extends React.Component{
     constructor (props) {
@@ -44,6 +45,16 @@ class CreateAddYeezy extends React.Component{
         console.log(`Add Yeezy Description: ${this.state.addYeezy_description}`);
         console.log(`Add Yeezy Price: ${this.state.addYeezy_price}`);
         console.log(`Add Yeezy Priority: ${this.state.addYeezy_priority}`);
+
+        const newAddYeezy = {
+            addYeezy_description: this.state.addYeezy_description,
+            addYeezy_price: this.state.addYeezy_price,
+            addYeezy_priority: this.state.addYeezy_priority,
+            addYeezy_released: this.state.addYeezy_released,
+        };
+
+        axios.post('http://localhost:3000/addYeezys/add', newAddYeezy)
+            .then(res => console.log(res.data));
         
         this.setState({
             addYeezy_description: '',
