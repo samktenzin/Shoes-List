@@ -66,7 +66,7 @@ class CreateAddYeezy extends React.Component{
 
     render () {
         return (
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 10, marginLeft: 1150}}>
                 <h3>Add New Yeezy</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 

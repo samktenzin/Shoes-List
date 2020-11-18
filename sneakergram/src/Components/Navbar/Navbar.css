@@ -2,19 +2,20 @@
     background-color: #F76A43;
     overflow: visible;
     height: 50px;
-    margin-right: 60px;
-    width: auto;
+    margin-right: 0px;
+    width: 100%;
+    margin-top: 0px;
   }
   
   .Yeezynav a  {
     float: right;
     color: #4d4343;
-    text-align: center;
+    text-align: right;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
   }
   
   .Yeezynav a:hover {

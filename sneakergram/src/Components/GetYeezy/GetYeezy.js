@@ -41,7 +41,7 @@ class GetYeezy extends React.Component{
         return (
             <div>
                 <h3>Yeezys List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }} >
+                <table className="table table-striped" style={{ marginTop: 20, marginLeft:1150 }} >
                     <thead>
                         <tr>
                             <th>Description</th>
