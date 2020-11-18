@@ -14,7 +14,7 @@ class CreateAddYeezy extends React.Component{
             addYeezy_description: '',
             addYeezy_price: '',
             addYeezy_priority: '',
-            addYeezy_released: false
+            addYeezy_purchased: false
         }
         //Setting the initial state of the component
         //with the properties above.
@@ -50,7 +50,7 @@ class CreateAddYeezy extends React.Component{
             addYeezy_description: this.state.addYeezy_description,
             addYeezy_price: this.state.addYeezy_price,
             addYeezy_priority: this.state.addYeezy_priority,
-            addYeezy_released: this.state.addYeezy_released,
+            addYeezy_purchased: this.state.addYeezy_purchased,
         };
 
         axios.post('http://localhost:3000/addYeezys/add', newAddYeezy)
@@ -60,7 +60,7 @@ class CreateAddYeezy extends React.Component{
             addYeezy_description: '',
             addYeezy_price: '',
             addYeezy_priority: '',
-            addYeezy_released: false
+            addYeezy_purchased: false
         })
     }
 
